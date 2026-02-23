@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "历史记录去重查看器",
+  "version": "1.0",
+  "description": "按日期和域名去重查看浏览器历史记录",
+  "permissions": [
+    "history"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "查看历史记录"
+  }
+}
