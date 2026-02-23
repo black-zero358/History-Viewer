@@ -1,3 +1,4 @@
+
 # 🌐 浏览器历史记录去重查看器 (History Deduplicator)
 
 一个轻量级的 Chrome / Edge 浏览器扩展，用于按时间段读取浏览历史，并按**“同一天 + 主域名”**进行精准去重合并，支持一键导出为功能丰富的 Excel 数据表。
@@ -22,4 +23,36 @@
 
 1. **克隆或下载此仓库**到你的本地电脑：
    ```bash
-   git clone [https://github.com/你的用户名/History-Viewer.git](https://github.com/你的用户名/History-Viewer.git)
+   git clone https://github.com/black-zero358/History-Viewer.git
+
+   ```
+
+*(注意：确保仓库内已包含 `xlsx.full.min.js` 文件。如果没有，可以使用 pwsh 运行 `Invoke-WebRequest -Uri "https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js" -OutFile "xlsx.full.min.js"` 获取)*
+
+2. **打开扩展管理页面**：
+* Chrome 浏览器地址栏输入：`chrome://extensions/`
+* Edge 浏览器地址栏输入：`edge://extensions/`
+
+
+3. **开启“开发者模式”**（通常在页面右上角或左下角的开关）。
+4. 点击 **“加载已解压的扩展程序” (Load unpacked)** 按钮。
+5. 选择你刚刚下载/克隆的 `History-Viewer` 文件夹即可完成安装。
+6. 点击浏览器工具栏的拼图图标 🧩，将本插件固定在外面，点击即可开始查询和导出！
+
+## 📂 目录结构
+
+```text
+History-Viewer/
+├── manifest.json       # 扩展配置文件 (Manifest V3)
+├── popup.html          # 扩展弹窗用户界面
+├── popup.js            # 核心业务逻辑 (历史记录读取、去重、导出)
+├── xlsx.full.min.js    # SheetJS 本地依赖库
+└── README.md           # 项目说明文档
+
+```
+
+
+## 📄 许可证
+
+本项目采用 MIT License 开源许可证。
+
